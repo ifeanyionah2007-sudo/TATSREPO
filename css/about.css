@@ -1,0 +1,320 @@
+/* =========================================
+   TATS DESIGN - ABOUT PAGE
+   ========================================= */
+
+
+/* =========================================
+   ABOUT HERO
+   ========================================= */
+
+.about-hero {
+    padding: 90px 0;
+    background-color: midnightblue;
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: goldenrod;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.about-hero h1 {
+    margin: 0 0 18px;
+    color: white;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.about-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: whitesmoke;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   OUR STORY
+   ========================================= */
+
+.about-story {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    margin: 0 0 22px;
+    color: midnightblue;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.about-content p {
+    margin: 0 0 18px;
+    color: dimgray;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   STORY CARD
+   ========================================= */
+
+.about-story-card {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px lightgray;
+}
+
+.about-story-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: goldenrod;
+    color: midnightblue;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.about-story-card h3 {
+    margin: 0 0 8px;
+    color: midnightblue;
+    font-size: 25px;
+}
+
+.about-story-card p {
+    margin: 0;
+    color: dimgray;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MISSION
+   ========================================= */
+
+.about-mission {
+    padding: 80px 0;
+    background-color: whitesmoke;
+}
+
+.about-section-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.about-section-heading h2 {
+    margin: 0 0 15px;
+    color: midnightblue;
+    font-size: 36px;
+}
+
+.about-section-heading p {
+    margin: 0;
+    color: dimgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VALUES
+   ========================================= */
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.about-value-card {
+    padding: 30px 22px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.about-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px lightgray;
+}
+
+.about-value-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-value-card h3 {
+    margin: 0 0 10px;
+    color: midnightblue;
+    font-size: 19px;
+}
+
+.about-value-card p {
+    margin: 0;
+    color: dimgray;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+   ========================================= */
+
+.about-cta {
+    padding: 80px 0;
+    background-color: midnightblue;
+}
+
+.about-cta-content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-cta h2 {
+    margin: 0 0 15px;
+    color: white;
+    font-size: 36px;
+}
+
+.about-cta p {
+    margin: 0 auto 25px;
+    color: whitesmoke;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content-grid {
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding: 65px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 38px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+
+    .about-story,
+    .about-mission,
+    .about-cta {
+        padding: 60px 0;
+    }
+
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-content {
+        max-width: none;
+    }
+
+    .about-content h2,
+    .about-section-heading h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-hero {
+        padding: 50px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .about-hero p {
+        font-size: 14px;
+    }
+
+    .about-story,
+    .about-mission,
+    .about-cta {
+        padding: 50px 0;
+    }
+
+    .about-content h2,
+    .about-section-heading h2,
+    .about-cta h2 {
+        font-size: 27px;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story-card {
+        padding: 40px 20px;
+    }
+
+}

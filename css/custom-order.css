@@ -1,0 +1,331 @@
+/* =========================================
+   TATS DESIGN - CUSTOM ORDER
+   ========================================= */
+
+
+/* =========================================
+   CUSTOM ORDER SECTION
+   ========================================= */
+
+.custom-order-section {
+    padding: 70px 0;
+    background-color: whitesmoke;
+    min-height: 70vh;
+}
+
+
+/* =========================================
+   PAGE HEADING
+   ========================================= */
+
+.custom-order-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.custom-order-heading h1 {
+    margin: 0 0 12px;
+    color: midnightblue;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.custom-order-heading p {
+    margin: 0;
+    color: dimgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CUSTOM ORDER CARD
+   ========================================= */
+
+.custom-order-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px lightgray;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.custom-order-form {
+    width: 100%;
+}
+
+
+/* =========================================
+   SECTION TITLES
+   ========================================= */
+
+.custom-order-section-title {
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.custom-order-section-title:not(:first-child) {
+    margin-top: 40px;
+}
+
+.custom-order-section-title h2 {
+    margin: 0;
+    color: midnightblue;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FORM GRID
+   ========================================= */
+
+.custom-order-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================================
+   FORM GROUP
+   ========================================= */
+
+.custom-form-group {
+    margin-bottom: 22px;
+}
+
+.custom-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: midnightblue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.custom-form-group input,
+.custom-form-group select,
+.custom-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.custom-form-group input,
+.custom-form-group select {
+    min-height: 48px;
+    padding: 0 14px;
+}
+
+.custom-form-group textarea {
+    min-height: 150px;
+    padding: 14px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+   ========================================= */
+
+.custom-form-group input:focus,
+.custom-form-group select:focus,
+.custom-form-group textarea:focus {
+    border-color: midnightblue;
+    box-shadow: 0 0 0 3px lavender;
+}
+
+
+/* =========================================
+   FILE INPUT
+   ========================================= */
+
+.custom-form-group input[type="file"] {
+    padding: 12px;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.custom-form-group input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   SMALL HELP TEXT
+   ========================================= */
+
+.custom-form-group small {
+    display: block;
+    margin-top: 7px;
+    color: dimgray;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.custom-form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.custom-order-message {
+    display: none;
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border-radius: 7px;
+    background-color: honeydew;
+    color: seagreen;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.custom-order-message.show {
+    display: block;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+.custom-order-button {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 5px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 7px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.custom-order-button:hover {
+    background-color: darkblue;
+}
+
+.custom-order-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   INVALID INPUT
+   ========================================= */
+
+.custom-form-group input:invalid:not(:placeholder-shown),
+.custom-form-group select:invalid,
+.custom-form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: indianred;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .custom-order-section {
+        padding: 50px 0;
+    }
+
+    .custom-order-heading h1 {
+        font-size: 30px;
+    }
+
+    .custom-order-heading p {
+        font-size: 15px;
+    }
+
+    .custom-order-card {
+        padding: 30px 22px;
+    }
+
+    .custom-order-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .custom-order-section {
+        padding: 40px 0;
+    }
+
+    .custom-order-heading h1 {
+        font-size: 26px;
+    }
+
+    .custom-order-heading p {
+        font-size: 14px;
+    }
+
+    .custom-order-card {
+        padding: 25px 15px;
+        border-radius: 10px;
+    }
+
+    .custom-order-section-title h2 {
+        font-size: 19px;
+    }
+
+    .custom-form-group input,
+    .custom-form-group select {
+        min-height: 46px;
+    }
+
+    .custom-order-button {
+        min-height: 50px;
+    }
+
+}

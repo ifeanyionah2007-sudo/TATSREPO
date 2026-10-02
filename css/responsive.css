@@ -1,0 +1,283 @@
+/* =========================================
+   TATS DESIGN
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .header-container {
+        gap: 18px;
+    }
+
+    .desktop-nav {
+        gap: 18px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .desktop-nav a {
+        font-size: 13px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        position: relative;
+    }
+
+    .header-container {
+        min-height: 72px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .desktop-nav {
+        width: 100%;
+        order: 3;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin-left: 0;
+        padding: 10px 0;
+        border-top: 1px solid lightgray;
+    }
+
+    .desktop-nav a {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .header-actions .icon-button {
+        font-size: 12px;
+    }
+
+    .account-button {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-container {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        min-height: 360px;
+    }
+
+    .hero-image-placeholder {
+        height: 360px;
+    }
+
+
+    /* SECTIONS */
+
+    .categories-section,
+    .products-section,
+    .why-section,
+    .custom-section,
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* CATEGORIES */
+
+.category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.category-card {
+    min-height: 230px;
+}
+
+.category-content {
+    padding: 16px;
+}
+
+.category-content h3 {
+    font-size: 15px;
+}
+
+.category-content span {
+    font-size: 11px;
+}
+
+
+    /* PRODUCTS */
+
+.product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.product-image {
+    height: 240px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 15px;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+
+    /* BENEFITS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CUSTOM */
+
+    .custom-content h2 {
+        font-size: 38px;
+    }
+
+
+    /* CTA */
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .header-actions .icon-button {
+        display: none;
+    }
+
+    .account-button {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

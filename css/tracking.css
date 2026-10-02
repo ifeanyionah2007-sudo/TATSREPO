@@ -1,0 +1,462 @@
+/* =========================================
+   TATS DESIGN - ORDER TRACKING
+   ========================================= */
+
+
+/* =========================================
+   TRACKING SECTION
+   ========================================= */
+
+.tracking-section {
+    padding: 70px 0;
+    background-color: whitesmoke;
+    min-height: 70vh;
+}
+
+
+/* =========================================
+   PAGE HEADING
+   ========================================= */
+
+.tracking-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.tracking-heading h1 {
+    margin-bottom: 12px;
+    color: midnightblue;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.tracking-heading p {
+    margin: 0;
+    color: dimgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TRACKING CARD
+   ========================================= */
+
+.tracking-card {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px lightgray;
+}
+
+
+/* =========================================
+   TRACKING FORM
+   ========================================= */
+
+.tracking-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.tracking-form-group {
+    flex: 1;
+}
+
+.tracking-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: midnightblue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tracking-form-group input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.tracking-form-group input:focus {
+    border-color: midnightblue;
+    box-shadow: 0 0 0 3px lavender;
+}
+
+.tracking-form-group input::placeholder {
+    color: darkgray;
+}
+
+
+/* =========================================
+   TRACKING BUTTON
+   ========================================= */
+
+.tracking-button {
+    min-height: 48px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 7px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tracking-button:hover {
+    background-color: darkblue;
+}
+
+.tracking-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   TRACKING MESSAGE
+   ========================================= */
+
+.tracking-message {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 15px;
+    border-radius: 7px;
+    background-color: mistyrose;
+    color: firebrick;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tracking-message.show {
+    display: block;
+}
+
+
+/* =========================================
+   TRACKING RESULT
+   ========================================= */
+
+.tracking-result {
+    display: none;
+    max-width: 850px;
+    margin: 35px auto 0;
+}
+
+.tracking-result.show {
+    display: block;
+}
+
+
+/* =========================================
+   ORDER SUMMARY
+   ========================================= */
+
+.tracking-order-card {
+    padding: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px lightgray;
+}
+
+.tracking-order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.tracking-order-header h2 {
+    margin: 0;
+    color: midnightblue;
+    font-size: 24px;
+}
+
+.tracking-order-number {
+    margin-top: 6px;
+    color: dimgray;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ORDER STATUS
+   ========================================= */
+
+.tracking-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background-color: lightyellow;
+    color: darkgoldenrod;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ORDER DETAILS
+   ========================================= */
+
+.tracking-order-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 25px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.tracking-detail-item {
+    padding: 18px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+
+.tracking-detail-label {
+    display: block;
+    margin-bottom: 7px;
+    color: dimgray;
+    font-size: 13px;
+}
+
+.tracking-detail-value {
+    display: block;
+    color: midnightblue;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TRACKING TIMELINE
+   ========================================= */
+
+.tracking-timeline {
+    padding-top: 30px;
+}
+
+.tracking-timeline h3 {
+    margin: 0 0 25px;
+    color: midnightblue;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   TIMELINE ITEM
+   ========================================= */
+
+.tracking-step {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    min-height: 75px;
+}
+
+.tracking-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 13px;
+    width: 2px;
+    height: 55px;
+    background-color: lightgray;
+}
+
+
+/* =========================================
+   TIMELINE ICON
+   ========================================= */
+
+.tracking-step-icon {
+    position: relative;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: lightgray;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.tracking-step.completed .tracking-step-icon {
+    background-color: seagreen;
+}
+
+.tracking-step.active .tracking-step-icon {
+    background-color: goldenrod;
+}
+
+
+/* =========================================
+   TIMELINE CONTENT
+   ========================================= */
+
+.tracking-step-content {
+    padding-bottom: 20px;
+}
+
+.tracking-step-content h4 {
+    margin: 2px 0 5px;
+    color: midnightblue;
+    font-size: 15px;
+}
+
+.tracking-step-content p {
+    margin: 0;
+    color: dimgray;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ORDER ITEMS
+   ========================================= */
+
+.tracking-items {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid lightgray;
+}
+
+.tracking-items h3 {
+    margin: 0 0 20px;
+    color: midnightblue;
+    font-size: 20px;
+}
+
+.tracking-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.tracking-item-name {
+    color: midnightblue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tracking-item-quantity {
+    color: dimgray;
+    font-size: 13px;
+}
+
+.tracking-item-price {
+    color: midnightblue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .tracking-section {
+        padding: 50px 0;
+    }
+
+    .tracking-heading h1 {
+        font-size: 30px;
+    }
+
+    .tracking-card {
+        padding: 25px 20px;
+    }
+
+    .tracking-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tracking-button {
+        width: 100%;
+    }
+
+    .tracking-order-card {
+        padding: 25px 20px;
+    }
+
+    .tracking-order-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tracking-order-details {
+        grid-template-columns: 1fr;
+    }
+
+    .tracking-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .tracking-section {
+        padding: 40px 0;
+    }
+
+    .tracking-heading h1 {
+        font-size: 26px;
+    }
+
+    .tracking-heading p {
+        font-size: 14px;
+    }
+
+    .tracking-card {
+        padding: 20px 15px;
+    }
+
+    .tracking-order-card {
+        padding: 20px 15px;
+    }
+
+    .tracking-order-header h2 {
+        font-size: 20px;
+    }
+
+    .tracking-status {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account | Tats Design</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/account.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header id="siteHeader">
+
+        <div class="container">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Tats Design
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a
+                    href="account.html"
+                    class="active"
+                >
+                    Account
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN ACCOUNT AREA
+         ========================================= -->
+
+    <main>
+
+        <section class="account-section">
+
+            <div class="container">
+
+                <div class="account-layout">
+
+
+                    <!-- =================================
+                         SIDEBAR
+                         ================================= -->
+
+                    <aside class="account-sidebar">
+
+                        <h2>
+                            My Account
+                        </h2>
+
+
+                        <nav class="account-menu">
+
+                            <a
+                                href="account.html"
+                                class="active"
+                            >
+                                Account Overview
+                            </a>
+
+                            <a href="tracking.html">
+                                My Orders
+                            </a>
+
+                            <a href="wishlist.html">
+                                My Wishlist
+                            </a>
+
+                            <a href="cart.html">
+                                My Cart
+                            </a>
+
+                            <a href="shop.html">
+                                Continue Shopping
+                            </a>
+
+                            <button
+                                type="button"
+                                class="logout-button"
+                                id="logoutButton"
+                            >
+                                Logout
+                            </button>
+
+                        </nav>
+
+                    </aside>
+
+
+
+                    <!-- =================================
+                         ACCOUNT CONTENT
+                         ================================= -->
+
+                    <div class="account-content">
+
+
+                        <!-- WELCOME -->
+
+                        <div class="account-welcome">
+
+                            <h1>
+                                Welcome,
+                                <span id="customerFirstName">
+                                    Customer
+                                </span>
+                            </h1>
+
+                            <p>
+                                Manage your account, orders
+                                and shopping activities.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            class="account-message"
+                            id="accountMessage"
+                        >
+                        </div>
+
+
+
+                        <!-- =================================
+                             STATISTICS
+                             ================================= -->
+
+                        <div class="account-stats">
+
+
+                            <div class="account-stat">
+
+                                <h3>
+                                    Total Orders
+                                </h3>
+
+                                <strong id="orderCount">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="account-stat">
+
+                                <h3>
+                                    Wishlist Items
+                                </h3>
+
+                                <strong id="wishlistCount">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="account-stat">
+
+                                <h3>
+                                    Cart Items
+                                </h3>
+
+                                <strong id="cartCount">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             PERSONAL INFORMATION
+                             ================================= -->
+
+                        <div class="account-card">
+
+                            <h2>
+                                Personal Information
+                            </h2>
+
+
+                            <div class="customer-info">
+
+
+                                <div class="customer-info-item">
+
+                                    <span>
+                                        Full Name
+                                    </span>
+
+                                    <strong id="customerName">
+                                        Customer Name
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="customer-info-item">
+
+                                    <span>
+                                        Email Address
+                                    </span>
+
+                                    <strong id="customerEmail">
+                                        customer@example.com
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="customer-info-item">
+
+                                    <span>
+                                        Phone Number
+                                    </span>
+
+                                    <strong id="customerPhone">
+                                        Not provided
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="customer-info-item">
+
+                                    <span>
+                                        Account Type
+                                    </span>
+
+                                    <strong>
+                                        Tats Design Customer
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             QUICK ACTIONS
+                             ================================= -->
+
+                        <div class="account-card">
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+
+                            <div class="account-actions">
+
+
+                                <a
+                                    href="shop.html"
+                                    class="account-action"
+                                >
+
+                                    <strong>
+                                        Shop Footwear
+                                    </strong>
+
+                                    <span>
+                                        Browse our latest collection
+                                    </span>
+
+                                </a>
+
+
+                                <a
+                                    href="wishlist.html"
+                                    class="account-action"
+                                >
+
+                                    <strong>
+                                        My Wishlist
+                                    </strong>
+
+                                    <span>
+                                        View your saved footwear
+                                    </span>
+
+                                </a>
+
+
+                                <a
+                                    href="cart.html"
+                                    class="account-action"
+                                >
+
+                                    <strong>
+                                        My Cart
+                                    </strong>
+
+                                    <span>
+                                        Review your shopping cart
+                                    </span>
+
+                                </a>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             RECENT ORDERS
+                             ================================= -->
+
+                        <div class="account-card">
+
+                            <h2>
+                                Recent Orders
+                            </h2>
+
+
+                            <div
+                                class="account-orders-empty"
+                                id="recentOrders"
+                            >
+
+                                <p>
+                                    You have no orders yet.
+                                </p>
+
+                                <a
+                                    href="shop.html"
+                                    class="btn btn-primary"
+                                >
+                                    Start Shopping
+                                </a>
+
+                            </div>
+
+                        </div>
+
+     <!-- =========================================
+     CUSTOM REQUESTS
+     ========================================= -->
+
+<div class="account-card">
+
+    <div class="account-card-header">
+
+        <h2>
+            Custom Footwear Requests
+        </h2>
+
+    </div>
+
+
+    <div
+        class="custom-requests"
+        id="customRequests"
+    >
+
+        <!-- CUSTOM REQUESTS WILL LOAD HERE -->
+
+    </div>
+
+</div>
+
+
+
+                        <!-- =================================
+                             ACCOUNT STATUS
+                             ================================= -->
+
+                        <div class="account-card">
+
+                            <h2>
+                                Account Status
+                            </h2>
+
+
+                            <div class="account-status">
+
+                                <div class="account-status-dot">
+                                </div>
+
+                                <span>
+                                    Your account is active.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-column">
+
+                    <div class="footer-brand">
+                        Tats Design
+                    </div>
+
+                    <p class="footer-tagline">
+                        Crafted for Every Step.
+                    </p>
+
+                    <p>
+                        Premium footwear designed
+                        for comfort, confidence and
+                        everyday style.
+                    </p>
+
+                </div>
+
+
+
+                <!-- SHOP -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="shop.html">
+                                All Footwear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">
+                                Men's Shoes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">
+                                Women's Shoes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="wishlist.html">
+                                Wishlist
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- CUSTOMER -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Customer
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="account.html">
+                                My Account
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cart.html">
+                                Shopping Cart
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tracking.html">
+                                Track Order
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Company
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="custom-order.html">
+                                Custom Orders
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Tats Design.
+                    All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/account.js"></script>
+
+
+</body>
+
+</html>

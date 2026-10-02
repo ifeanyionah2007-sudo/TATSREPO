@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Tats Design</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- ADMIN DASHBOARD -->
+
+    <div class="admin-dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar" id="adminSidebar">
+
+            <div class="admin-logo">
+                <div class="admin-logo-icon">
+                    TD
+                </div>
+
+                <div>
+                    <h2>Tats Design</h2>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+
+
+            <!-- ADMIN NAVIGATION -->
+
+            <nav class="admin-nav">
+
+                <a href="admin.html" class="admin-nav-link active">
+                    <span class="admin-nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">▣</span>
+                    <span>Orders</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">◆</span>
+                    <span>Products</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">♙</span>
+                    <span>Customers</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">✦</span>
+                    <span>Custom Requests</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">₦</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">➜</span>
+                    <span>Delivery</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">★</span>
+                    <span>Reviews</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">●</span>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="#" class="admin-nav-link">
+                    <span class="admin-nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="admin-sidebar-footer">
+
+                <a href="index.html" class="admin-back-store">
+                    ← Back to Store
+                </a>
+
+                <button type="button" id="adminLogoutButton" class="admin-logout">
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN ADMIN AREA -->
+
+        <main class="admin-main">
+
+            <!-- TOP BAR -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="adminMenuButton"
+                        class="admin-menu-button"
+                        aria-label="Open admin menu"
+                    >
+                        ☰
+                    </button>
+
+                    <div>
+                        <span class="admin-page-label">
+                            ADMINISTRATION
+                        </span>
+
+                        <h1>Dashboard</h1>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-right">
+
+                    <button
+                        type="button"
+                        class="admin-notification-button"
+                        aria-label="Notifications"
+                    >
+                        ●
+                        <span class="admin-notification-dot"></span>
+                    </button>
+
+
+                    <div class="admin-user">
+
+                        <div class="admin-user-avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Administrator</strong>
+                            <span>Store Manager</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD CONTENT -->
+
+            <section class="admin-content">
+
+                <!-- WELCOME -->
+
+                <div class="admin-welcome">
+
+                    <div>
+                        <span class="admin-welcome-label">
+                            OVERVIEW
+                        </span>
+
+                        <h2>Welcome back, Administrator</h2>
+
+                        <p>
+                            Here's what's happening with your Tats Design store.
+                        </p>
+                    </div>
+
+                    <a href="shop.html" class="admin-view-store">
+                        View Store
+                    </a>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="admin-stats">
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ₦
+                        </div>
+
+                        <div class="admin-stat-info">
+                            <span>Total Revenue</span>
+                            <strong>₦0</strong>
+                            <small>All time revenue</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ▣
+                        </div>
+
+                        <div class="admin-stat-info">
+                            <span>Total Orders</span>
+                            <strong>0</strong>
+                            <small>Orders received</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ♙
+                        </div>
+
+                        <div class="admin-stat-info">
+                            <span>Customers</span>
+                            <strong>0</strong>
+                            <small>Registered customers</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ◆
+                        </div>
+
+                        <div class="admin-stat-info">
+                            <span>Products</span>
+                            <strong>12</strong>
+                            <small>Products in catalogue</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD GRID -->
+
+                <div class="admin-dashboard-grid">
+
+
+                    <!-- RECENT ORDERS -->
+
+                    <div class="admin-panel admin-orders-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <span>STORE ACTIVITY</span>
+                                <h3>Recent Orders</h3>
+                            </div>
+
+                            <a href="#" class="admin-panel-link">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="admin-table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Customer</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td colspan="4" class="admin-empty-table">
+                                            No orders have been received yet.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOW STOCK -->
+
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <span>INVENTORY</span>
+                                <h3>Low Stock</h3>
+                            </div>
+
+                            <a href="#" class="admin-panel-link">
+                                Manage
+                            </a>
+
+                        </div>
+
+
+                        <div class="admin-low-stock">
+
+                            <div class="admin-stock-item">
+
+                                <div class="admin-stock-product">
+                                    <strong>Classic Leather Loafers</strong>
+                                    <span>Men's Shoes</span>
+                                </div>
+
+                                <span class="admin-stock-number">
+                                    12 left
+                                </span>
+
+                            </div>
+
+
+                            <div class="admin-stock-item">
+
+                                <div class="admin-stock-product">
+                                    <strong>Elegant Leather Flats</strong>
+                                    <span>Women's Shoes</span>
+                                </div>
+
+                                <span class="admin-stock-number">
+                                    8 left
+                                </span>
+
+                            </div>
+
+
+                            <div class="admin-stock-item">
+
+                                <div class="admin-stock-product">
+                                    <strong>Premium Comfort Sandals</strong>
+                                    <span>Sandals</span>
+                                </div>
+
+                                <span class="admin-stock-number">
+                                    6 left
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CUSTOM REQUESTS -->
+
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <span>CUSTOM FOOTWEAR</span>
+                                <h3>Custom Requests</h3>
+                            </div>
+
+                            <a href="#" class="admin-panel-link">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="admin-request-empty">
+
+                            <div class="admin-empty-icon">
+                                ✦
+                            </div>
+
+                            <h4>No custom requests yet</h4>
+
+                            <p>
+                                New custom footwear requests will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STORE ACTIVITY -->
+
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <span>SYSTEM</span>
+                                <h3>Store Activity</h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-activity">
+
+                            <div class="admin-activity-item">
+
+                                <span class="admin-activity-dot"></span>
+
+                                <div>
+                                    <strong>Admin dashboard created</strong>
+                                    <small>System setup</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-activity-item">
+
+                                <span class="admin-activity-dot"></span>
+
+                                <div>
+                                    <strong>Product catalogue active</strong>
+                                    <small>12 products available</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admin-activity-item">
+
+                                <span class="admin-activity-dot"></span>
+
+                                <div>
+                                    <strong>Store ready for orders</strong>
+                                    <small>Waiting for first order</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ADMIN JAVASCRIPT -->
+
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

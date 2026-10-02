@@ -1,0 +1,842 @@
+/* =========================================
+   TATS DESIGN ADMIN DASHBOARD
+========================================= */
+
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.admin-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.admin-sidebar {
+    width: 255px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: midnightblue;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+/* =========================================
+   ADMIN LOGO
+========================================= */
+
+.admin-logo {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    border-bottom: 1px solid slategray;
+}
+
+.admin-logo-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: goldenrod;
+    color: midnightblue;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.admin-logo h2 {
+    margin: 0 0 3px;
+    color: white;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.admin-logo span {
+    color: lightgray;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   ADMIN NAVIGATION
+========================================= */
+
+.admin-nav {
+    flex: 1;
+    padding: 25px 15px;
+    overflow-y: auto;
+}
+
+.admin-nav-link {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 5px;
+    padding: 0 14px;
+    color: lightgray;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.admin-nav-link:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.admin-nav-link.active {
+    background-color: goldenrod;
+    color: midnightblue;
+    font-weight: 700;
+}
+
+.admin-nav-icon {
+    width: 22px;
+    min-width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SIDEBAR FOOTER
+========================================= */
+
+.admin-sidebar-footer {
+    padding: 18px 15px;
+    border-top: 1px solid slategray;
+}
+
+.admin-back-store,
+.admin-logout {
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.admin-back-store {
+    background-color: steelblue;
+    color: white;
+}
+
+.admin-back-store:hover {
+    background-color: royalblue;
+}
+
+.admin-logout {
+    border: 1px solid slategray;
+    background-color: transparent;
+    color: lightgray;
+}
+
+.admin-logout:hover {
+    background-color: firebrick;
+    border-color: firebrick;
+    color: white;
+}
+
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.admin-main {
+    width: calc(100% - 255px);
+    min-height: 100vh;
+    margin-left: 255px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.admin-topbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 35px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+}
+
+.admin-topbar-left,
+.admin-topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.admin-topbar-left {
+    gap: 15px;
+}
+
+.admin-topbar-right {
+    gap: 22px;
+}
+
+.admin-page-label {
+    display: block;
+    margin-bottom: 4px;
+    color: goldenrod;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.admin-topbar h1 {
+    margin: 0;
+    color: midnightblue;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.admin-menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    background-color: white;
+    color: midnightblue;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+.admin-notification-button {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    background-color: white;
+    color: midnightblue;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.admin-notification-button:hover {
+    background-color: whitesmoke;
+}
+
+.admin-notification-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: firebrick;
+}
+
+
+/* =========================================
+   ADMIN USER
+========================================= */
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-user-avatar {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: goldenrod;
+    color: midnightblue;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.admin-user strong,
+.admin-user span {
+    display: block;
+}
+
+.admin-user strong {
+    margin-bottom: 3px;
+    color: midnightblue;
+    font-size: 12px;
+}
+
+.admin-user span {
+    color: dimgray;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ADMIN CONTENT
+========================================= */
+
+.admin-content {
+    padding: 35px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.admin-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.admin-welcome-label {
+    display: block;
+    margin-bottom: 7px;
+    color: goldenrod;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.admin-welcome h2 {
+    margin: 0 0 8px;
+    color: midnightblue;
+    font-size: 27px;
+    line-height: 1.25;
+}
+
+.admin-welcome p {
+    margin: 0;
+    color: dimgray;
+    font-size: 13px;
+}
+
+.admin-view-store {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: 6px;
+    background-color: midnightblue;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.admin-view-store:hover {
+    background-color: royalblue;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.admin-stat-card {
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px lightgray;
+}
+
+.admin-stat-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: goldenrod;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.admin-stat-info span,
+.admin-stat-info strong,
+.admin-stat-info small {
+    display: block;
+}
+
+.admin-stat-info span {
+    margin-bottom: 6px;
+    color: dimgray;
+    font-size: 11px;
+}
+
+.admin-stat-info strong {
+    margin-bottom: 5px;
+    color: midnightblue;
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.admin-stat-info small {
+    color: darkgray;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 20px;
+}
+
+
+/* =========================================
+   ADMIN PANEL
+========================================= */
+
+.admin-panel {
+    min-width: 0;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px lightgray;
+}
+
+.admin-orders-panel {
+    grid-column: 1 / -1;
+}
+
+.admin-panel-header {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 22px;
+    border-bottom: 1px solid lightgray;
+}
+
+.admin-panel-header span {
+    display: block;
+    margin-bottom: 5px;
+    color: goldenrod;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.admin-panel-header h3 {
+    margin: 0;
+    color: midnightblue;
+    font-size: 17px;
+}
+
+.admin-panel-link {
+    color: royalblue;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-panel-link:hover {
+    color: midnightblue;
+}
+
+
+/* =========================================
+   ORDERS TABLE
+========================================= */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px 22px;
+    border-bottom: 1px solid whitesmoke;
+    text-align: left;
+    font-size: 12px;
+}
+
+.admin-table th {
+    background-color: whitesmoke;
+    color: dimgray;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.admin-table td {
+    color: dimgray;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-empty-table {
+    padding: 35px 20px !important;
+    color: darkgray !important;
+    text-align: center !important;
+}
+
+
+/* =========================================
+   LOW STOCK
+========================================= */
+
+.admin-low-stock {
+    padding: 5px 22px 10px;
+}
+
+.admin-stock-item {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.admin-stock-item:last-child {
+    border-bottom: none;
+}
+
+.admin-stock-product strong,
+.admin-stock-product span {
+    display: block;
+}
+
+.admin-stock-product strong {
+    margin-bottom: 4px;
+    color: midnightblue;
+    font-size: 12px;
+}
+
+.admin-stock-product span {
+    color: darkgray;
+    font-size: 10px;
+}
+
+.admin-stock-number {
+    padding: 6px 9px;
+    border-radius: 5px;
+    background-color: mistyrose;
+    color: firebrick;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   CUSTOM REQUESTS
+========================================= */
+
+.admin-request-empty {
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.admin-empty-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    color: goldenrod;
+    font-size: 18px;
+}
+
+.admin-request-empty h4 {
+    margin: 0 0 7px;
+    color: midnightblue;
+    font-size: 13px;
+}
+
+.admin-request-empty p {
+    max-width: 260px;
+    margin: 0 auto;
+    color: darkgray;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   STORE ACTIVITY
+========================================= */
+
+.admin-activity {
+    padding: 8px 22px 12px;
+}
+
+.admin-activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.admin-activity-item:last-child {
+    border-bottom: none;
+}
+
+.admin-activity-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
+
+.admin-activity-item strong,
+.admin-activity-item small {
+    display: block;
+}
+
+.admin-activity-item strong {
+    margin-bottom: 4px;
+    color: midnightblue;
+    font-size: 11px;
+}
+
+.admin-activity-item small {
+    color: darkgray;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE — 1100PX
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-orders-panel {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — 900PX
+========================================= */
+
+@media (max-width: 900px) {
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .admin-sidebar.admin-sidebar-open {
+        transform: translateX(0);
+    }
+
+    .admin-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .admin-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .admin-topbar {
+        padding: 15px 25px;
+    }
+
+    .admin-content {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — 650PX
+========================================= */
+
+@media (max-width: 650px) {
+
+    .admin-topbar {
+        padding: 14px 18px;
+    }
+
+    .admin-topbar h1 {
+        font-size: 20px;
+    }
+
+    .admin-topbar-right {
+        gap: 10px;
+    }
+
+    .admin-user div:last-child {
+        display: none;
+    }
+
+    .admin-content {
+        padding: 20px 15px;
+    }
+
+    .admin-welcome {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-welcome h2 {
+        font-size: 23px;
+    }
+
+    .admin-view-store {
+        width: 100%;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-stat-card {
+        min-height: 105px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — 480PX
+========================================= */
+
+@media (max-width: 480px) {
+
+    .admin-topbar-left {
+        gap: 9px;
+    }
+
+    .admin-page-label {
+        font-size: 8px;
+    }
+
+    .admin-topbar h1 {
+        font-size: 18px;
+    }
+
+    .admin-notification-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .admin-user-avatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .admin-stat-card {
+        padding: 16px;
+    }
+
+    .admin-stat-info strong {
+        font-size: 20px;
+    }
+
+    .admin-panel-header {
+        padding: 16px;
+    }
+
+    .admin-low-stock {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .admin-stock-product strong {
+        font-size: 11px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 13px 15px;
+    }
+
+}

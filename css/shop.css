@@ -1,0 +1,485 @@
+/* =========================================
+   TATS DESIGN
+   SHOP PAGE
+========================================= */
+
+
+/* =========================================
+   SHOP HERO
+========================================= */
+
+.shop-hero {
+    padding: 90px 0;
+    background-color: beige;
+    text-align: center;
+}
+
+.shop-hero-label {
+    display: block;
+    margin-bottom: 15px;
+    color: sienna;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.shop-hero h1 {
+    margin-bottom: 15px;
+    color: black;
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+.shop-hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: dimgray;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SHOP SECTION
+========================================= */
+
+.shop-section {
+    padding: 80px 0 100px;
+    background-color: white;
+}
+
+
+/* =========================================
+   SHOP TOP BAR
+========================================= */
+
+.shop-topbar {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.shop-search,
+.shop-sort {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shop-search label,
+.shop-sort label {
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.shop-search input,
+.shop-sort select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.shop-search input:focus,
+.shop-sort select:focus {
+    border-color: sienna;
+}
+
+.shop-search input::placeholder {
+    color: gray;
+}
+
+
+/* =========================================
+   CATEGORY BUTTONS
+========================================= */
+
+.shop-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.shop-category-button {
+    min-height: 40px;
+    padding: 0 17px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    background-color: white;
+    color: dimgray;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.shop-category-button:hover {
+    border-color: black;
+    color: black;
+}
+
+.shop-category-button.active {
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+
+/* =========================================
+   RESULTS COUNT
+========================================= */
+
+.shop-results {
+    padding: 25px 0;
+}
+
+.shop-results p {
+    color: gray;
+    font-size: 13px;
+}
+
+.shop-results strong {
+    color: black;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.shop-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* =========================================
+   SHOP PRODUCT CARD
+========================================= */
+
+.shop-product-card {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.shop-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px lightgray;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.shop-product-image {
+    position: relative;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+.shop-product-image::before {
+    content: "";
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: tan;
+}
+
+.shop-product-image span {
+    position: absolute;
+    z-index: 2;
+    color: dimgray;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   WISHLIST BUTTON
+========================================= */
+
+.shop-wishlist {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 4;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    font-size: 19px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px lightgray;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.shop-wishlist:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* =========================================
+   PRODUCT BADGE
+========================================= */
+
+.shop-product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.shop-product-info {
+    padding: 20px;
+}
+
+.shop-product-category {
+    display: block;
+    margin-bottom: 7px;
+    color: sienna;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.shop-product-info h3 {
+    min-height: 48px;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.shop-product-rating {
+    margin-bottom: 8px;
+    color: goldenrod;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.shop-product-rating span {
+    color: gray;
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+.shop-product-price {
+    margin-bottom: 8px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.shop-product-sizes {
+    margin-bottom: 15px;
+    color: gray;
+    font-size: 11px;
+}
+
+.shop-product-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.shop-add-cart,
+.shop-buy-now {
+    width: 100%;
+    min-height: 42px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.shop-add-cart {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.shop-add-cart:hover {
+    border-color: sienna;
+    background-color: sienna;
+}
+
+.shop-buy-now {
+    border: 1px solid lightgray;
+    background-color: white;
+    color: black;
+}
+
+.shop-buy-now:hover {
+    border-color: black;
+}
+
+
+/* =========================================
+   NO PRODUCTS
+========================================= */
+
+.no-products {
+    display: none;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.no-products h3 {
+    margin-bottom: 8px;
+    color: black;
+    font-size: 22px;
+}
+
+.no-products p {
+    color: gray;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SHOP RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .shop-product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .shop-hero {
+        padding: 65px 0;
+    }
+
+    .shop-hero h1 {
+        font-size: 40px;
+    }
+
+    .shop-section {
+        padding: 60px 0 80px;
+    }
+
+    .shop-topbar {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .shop-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .shop-product-image {
+        height: 240px;
+    }
+
+    .shop-product-info {
+        padding: 15px;
+    }
+
+    .shop-product-info h3 {
+        font-size: 15px;
+    }
+
+    .shop-product-price {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .shop-hero h1 {
+        font-size: 34px;
+    }
+
+    .shop-hero p {
+        font-size: 14px;
+    }
+
+    .shop-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-product-image {
+        height: 300px;
+    }
+
+    .shop-categories {
+        gap: 8px;
+    }
+
+    .shop-category-button {
+        font-size: 11px;
+        padding: 0 13px;
+    }
+
+}
+.shop-product-image-link {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: dimgray;
+    text-decoration: none;
+}
+
+.shop-product-image-link span {
+    color: dimgray;
+}

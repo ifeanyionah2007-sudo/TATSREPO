@@ -1,0 +1,356 @@
+/* =========================================
+   FAQ PAGE
+========================================= */
+
+.faq-section {
+    padding: 80px 0;
+    background-color: whitesmoke;
+}
+
+
+/* =========================================
+   FAQ HEADING
+========================================= */
+
+.faq-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.faq-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: goldenrod;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.faq-heading h1 {
+    margin: 0 0 18px;
+    color: midnightblue;
+    font-size: 44px;
+    line-height: 1.2;
+}
+
+.faq-heading p {
+    margin: 0;
+    color: dimgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FAQ CONTENT
+========================================= */
+
+.faq-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   FAQ CATEGORY
+========================================= */
+
+.faq-category {
+    margin-bottom: 45px;
+}
+
+.faq-category-heading {
+    margin-bottom: 20px;
+}
+
+.faq-category-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: goldenrod;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.faq-category-heading h2 {
+    margin: 0;
+    color: midnightblue;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   FAQ LIST
+========================================= */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   FAQ ITEM
+========================================= */
+
+.faq-item {
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px lightgray;
+}
+
+
+/* =========================================
+   FAQ QUESTION
+========================================= */
+
+.faq-question {
+    width: 100%;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 22px;
+    border: none;
+    background-color: white;
+    color: midnightblue;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    background-color: whitesmoke;
+}
+
+.faq-question span:first-child {
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FAQ ICON
+========================================= */
+
+.faq-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: midnightblue;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* =========================================
+   FAQ ANSWER
+========================================= */
+
+.faq-answer {
+    display: none;
+    padding: 0 22px 20px;
+    border-top: 1px solid lightgray;
+}
+
+.faq-answer p {
+    margin: 18px 0 0;
+    color: dimgray;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FAQ OPEN STATE
+========================================= */
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    background-color: goldenrod;
+    color: midnightblue;
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-question {
+    background-color: whitesmoke;
+}
+
+
+/* =========================================
+   FAQ CTA
+========================================= */
+
+.faq-cta {
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 55px 30px;
+    background-color: midnightblue;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.faq-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-cta-content > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: goldenrod;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.faq-cta-content h2 {
+    margin: 0 0 15px;
+    color: white;
+    font-size: 32px;
+}
+
+.faq-cta-content p {
+    margin: 0 auto 25px;
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FAQ CTA BUTTON
+========================================= */
+
+.faq-cta-content .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .faq-section {
+        padding: 60px 0;
+    }
+
+    .faq-heading {
+        margin-bottom: 40px;
+    }
+
+    .faq-heading h1 {
+        font-size: 36px;
+    }
+
+    .faq-heading p {
+        font-size: 15px;
+    }
+
+    .faq-category-heading h2 {
+        font-size: 25px;
+    }
+
+    .faq-question {
+        padding: 17px 18px;
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        padding: 0 18px 18px;
+    }
+
+    .faq-cta {
+        padding: 45px 25px;
+    }
+
+    .faq-cta-content h2 {
+        font-size: 29px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .faq-section {
+        padding: 50px 0;
+    }
+
+    .faq-heading h1 {
+        font-size: 30px;
+    }
+
+    .faq-heading p {
+        font-size: 14px;
+    }
+
+    .faq-category {
+        margin-bottom: 35px;
+    }
+
+    .faq-category-heading h2 {
+        font-size: 22px;
+    }
+
+    .faq-question {
+        min-height: 60px;
+        padding: 15px;
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .faq-icon {
+        width: 27px;
+        min-width: 27px;
+        height: 27px;
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        padding: 0 15px 15px;
+    }
+
+    .faq-answer p {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+
+    .faq-cta {
+        padding: 40px 20px;
+    }
+
+    .faq-cta-content h2 {
+        font-size: 26px;
+    }
+
+    .faq-cta-content p {
+        font-size: 14px;
+    }
+
+}

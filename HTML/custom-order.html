@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Custom Orders | Tats Design</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/custom-order.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header id="siteHeader">
+
+        <div class="container">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Tats Design
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="account.html">
+                    Account
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CUSTOM ORDER
+         ========================================= -->
+
+    <main>
+
+        <section class="custom-order-section">
+
+            <div class="container">
+
+
+                <!-- PAGE HEADING -->
+
+                <div class="custom-order-heading">
+
+                    <h1>
+                        Create Your Custom Footwear
+                    </h1>
+
+                    <p>
+                        Tell us how you want your footwear
+                        designed and our team will review
+                        your request.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CUSTOM ORDER FORM -->
+
+                <div class="custom-order-card">
+
+                    <form
+                        id="customOrderForm"
+                        class="custom-order-form"
+                    >
+
+
+                        <!-- CUSTOMER INFORMATION -->
+
+                        <div class="custom-order-section-title">
+
+                            <h2>
+                                Customer Information
+                            </h2>
+
+                        </div>
+
+
+                        <div class="custom-order-grid">
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customFirstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customFirstName"
+                                    name="firstName"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customLastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customLastName"
+                                    name="lastName"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customEmail">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="customEmail"
+                                    name="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customPhone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="customPhone"
+                                    name="phone"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- FOOTWEAR INFORMATION -->
+
+                        <div class="custom-order-section-title">
+
+                            <h2>
+                                Footwear Details
+                            </h2>
+
+                        </div>
+
+
+                        <div class="custom-order-grid">
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customShoeType">
+                                    Footwear Type
+                                </label>
+
+                                <select
+                                    id="customShoeType"
+                                    name="shoeType"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select footwear type
+                                    </option>
+
+                                    <option value="Loafers">
+                                        Loafers
+                                    </option>
+
+                                    <option value="Sneakers">
+                                        Sneakers
+                                    </option>
+
+                                    <option value="Sandals">
+                                        Sandals
+                                    </option>
+
+                                    <option value="Flats">
+                                        Flats
+                                    </option>
+
+                                    <option value="Leather Shoes">
+                                        Leather Shoes
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customSize">
+                                    Shoe Size
+                                </label>
+
+                                <select
+                                    id="customSize"
+                                    name="size"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select size
+                                    </option>
+
+                                    <option value="38">
+                                        38
+                                    </option>
+
+                                    <option value="39">
+                                        39
+                                    </option>
+
+                                    <option value="40">
+                                        40
+                                    </option>
+
+                                    <option value="41">
+                                        41
+                                    </option>
+
+                                    <option value="42">
+                                        42
+                                    </option>
+
+                                    <option value="43">
+                                        43
+                                    </option>
+
+                                    <option value="44">
+                                        44
+                                    </option>
+
+                                    <option value="45">
+                                        45
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customColor">
+                                    Preferred Color
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customColor"
+                                    name="color"
+                                    placeholder="Example: Black and brown"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="custom-form-group">
+
+                                <label for="customMaterial">
+                                    Preferred Material
+                                </label>
+
+                                <select
+                                    id="customMaterial"
+                                    name="material"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select material
+                                    </option>
+
+                                    <option value="Leather">
+                                        Leather
+                                    </option>
+
+                                    <option value="Suede">
+                                        Suede
+                                    </option>
+
+                                    <option value="Canvas">
+                                        Canvas
+                                    </option>
+
+                                    <option value="Synthetic">
+                                        Synthetic
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- CUSTOMIZATION -->
+
+                        <div class="custom-order-section-title">
+
+                            <h2>
+                                Customization
+                            </h2>
+
+                        </div>
+
+
+                        <div class="custom-form-group">
+
+                            <label for="customDescription">
+                                Describe Your Design
+                            </label>
+
+                            <textarea
+                                id="customDescription"
+                                name="description"
+                                rows="6"
+                                placeholder="Tell us about the design, pattern, logo, colour combination, finishing or any other details you want."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- REFERENCE IMAGE -->
+
+                        <div class="custom-form-group">
+
+                            <label for="customReference">
+                                Reference Image
+                            </label>
+
+                            <input
+                                type="file"
+                                id="customReference"
+                                name="referenceImage"
+                                accept="image/*"
+                            >
+
+                            <small>
+                                Optional. Upload an image that
+                                helps us understand your design.
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            class="custom-order-message"
+                            id="customOrderMessage"
+                        >
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="custom-order-button"
+                            id="customOrderButton"
+                        >
+                            Submit Custom Request
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div class="footer-column">
+
+                    <div class="footer-brand">
+                        Tats Design
+                    </div>
+
+                    <p class="footer-tagline">
+                        Crafted for Every Step.
+                    </p>
+
+                    <p>
+                        Premium footwear designed
+                        for comfort, confidence and
+                        everyday style.
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="shop.html">
+                                All Footwear
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="wishlist.html">
+                                Wishlist
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cart.html">
+                                Shopping Cart
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Customer
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="account.html">
+                                My Account
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tracking.html">
+                                Track Order
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="custom-order.html">
+                                Custom Orders
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Company
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Tats Design.
+                    All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/custom-order.js"></script>
+
+
+</body>
+
+</html>
