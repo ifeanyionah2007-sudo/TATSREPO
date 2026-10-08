@@ -1,12 +1,10 @@
 const express = require("express");
 
-const cors = require("cors");
+const customerRoutes = require("./routes/customerRoutes");
 
 const productRoutes = require("./routes/productRoutes");
 
 const app = express();
-
-const PORT = 3000;
 
 
 /* =========================================
@@ -14,7 +12,7 @@ const PORT = 3000;
 ========================================= */
 
 app.use(express.json());
-app.use(cors());
+
 
 /* =========================================
    MAIN API TEST ROUTE
@@ -35,13 +33,13 @@ app.get("/api", function (req, res) {
 ========================================= */
 
 app.use("/api/products", productRoutes);
-
+app.use("/api/customers", customerRoutes);
 
 /* =========================================
    START SERVER
 ========================================= */
-
-app.listen(PORT, function () {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", function () {
 
     console.log(
         `Tats Design server is running on http://localhost:${PORT}`

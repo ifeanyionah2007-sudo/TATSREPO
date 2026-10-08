@@ -8,22 +8,11 @@
 /* =========================================
    REGISTRATION
 ========================================= */
-
-const registerForm =
-    document.getElementById("registerForm");
-
-const registerMessage =
-    document.getElementById("registerMessage");
-
-const registerButton =
-    document.getElementById("registerButton");
-
-
 if (registerForm) {
 
     registerForm.addEventListener(
         "submit",
-        function (event) {
+        async function (event) {
 
             event.preventDefault();
 
@@ -110,113 +99,160 @@ if (registerForm) {
 
 
             /* =========================================
-               GET EXISTING CUSTOMERS
+               DISABLE BUTTON
             ========================================= */
 
-            let customers =
-                JSON.parse(
-                    localStorage.getItem(
-                        "tatsDesignCustomers"
-                    )
-                ) || [];
+            if (registerButton) {
 
+                registerButton.disabled = true;
 
-            /* =========================================
-               CHECK EXISTING EMAIL
-            ========================================= */
+                registerButton.textContent =
+                    "Creating Account...";
 
-            const existingCustomer =
-                customers.find(
-                    customer =>
-                        customer.email === email
-                );
-
-
-            if (existingCustomer) {
-
-                showRegisterMessage(
-                    "An account with this email already exists. Please login."
-                );
-
-                return;
             }
 
 
             /* =========================================
-               CREATE CUSTOMER
+               SEND CUSTOMER TO BACKEND
             ========================================= */
 
-            const customer = {
+            try {
 
-                id:
-                    "customer-" +
-                    Date.now(),
+                const response = await fetch(
+                    "http://localhost:3000/api/customers/register",
+                    {
+                        method: "POST",
 
-                firstName:
-                    firstName,
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
 
-                lastName:
-                    lastName,
+                        body: JSON.stringify({
 
-                email:
-                    email,
+                            firstName: firstName,
 
-                phone:
-                    phone,
+                            lastName: lastName,
 
-                password:
-                    password,
+                            email: email,
 
-                createdAt:
-                    new Date().toISOString()
+                            phone: phone,
 
-            };
+                            password: password
 
+                        })
 
-            /* =========================================
-               SAVE CUSTOMER
-            ========================================= */
-
-            customers.push(customer);
-
-            localStorage.setItem(
-                "tatsDesignCustomers",
-                JSON.stringify(customers)
-            );
+                    }
+                );
 
 
-            /* =========================================
-               SHOW SUCCESS
-            ========================================= */
-
-            showRegisterMessage(
-                "Registration successful! Redirecting to login..."
-            );
+                const data = await response.json();
 
 
-            /* =========================================
-               DISABLE BUTTON
-            ========================================= */
+                /* =========================================
+                   CHECK BACKEND RESPONSE
+                ========================================= */
 
-            registerButton.disabled = true;
+                if (!response.ok || !data.success) {
 
-            registerButton.textContent =
-                "Registration Successful";
+                    showRegisterMessage(
+                        data.message ||
+                        "Registration failed. Please try again."
+                    );
 
 
-            /* =========================================
-               REDIRECT TO LOGIN
-            ========================================= */
+                    if (registerButton) {
 
-            setTimeout(
-                function () {
+                        registerButton.disabled = false;
 
-                    window.location.href =
-                        "login.html";
+                        registerButton.textContent =
+                            "Create Account";
 
-                },
-                1500
-            );
+                    }
+
+                    return;
+                }
+
+
+                /* =========================================
+                   SAVE CURRENT CUSTOMER LOCALLY
+                   TEMPORARILY
+                ========================================= */
+
+                const customer = data.customer;
+
+
+                let customers =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "tatsDesignCustomers"
+                        )
+                    ) || [];
+
+
+                customers.push(customer);
+
+
+                localStorage.setItem(
+                    "tatsDesignCustomers",
+                    JSON.stringify(customers)
+                );
+
+
+                /* =========================================
+                   SHOW SUCCESS
+                ========================================= */
+
+                showRegisterMessage(
+                    "Registration successful! Redirecting to login..."
+                );
+
+
+                if (registerButton) {
+
+                    registerButton.textContent =
+                        "Registration Successful";
+
+                }
+
+
+                /* =========================================
+                   REDIRECT TO LOGIN
+                ========================================= */
+
+                setTimeout(
+                    function () {
+
+                        window.location.href =
+                            "login.html";
+
+                    },
+                    1500
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Registration error:",
+                    error
+                );
+
+
+                showRegisterMessage(
+                    "Unable to connect to the server. Please try again."
+                );
+
+
+                if (registerButton) {
+
+                    registerButton.disabled = false;
+
+                    registerButton.textContent =
+                        "Create Account";
+
+                }
+
+            }
 
         }
     );
